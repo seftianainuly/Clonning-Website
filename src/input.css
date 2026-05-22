@@ -3,12 +3,22 @@
 @keyframes marqueeRight {
     0%   { transform: translateX(-50%); }
     100% { transform: translateX(0%); }
-    }
+}
 
-    @keyframes marqueeLeft {
+@keyframes marqueeLeft {
     0%   { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
-    }
+}
+
+@keyframes fadeDown {
+    0%   { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    0%   { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
 
     @layer utilities {
     .animate-marquee-right {
@@ -17,4 +27,11 @@
     .animate-marquee-left {
         animation: marqueeLeft 20s linear infinite;
     }
+
+    .animate-fade-down { animation: fadeDown 0.8s ease-out both;
     }
+
+    .animate-fade-up   { animation: fadeUp   0.8s ease-out both;
+    }
+}
+
